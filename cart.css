@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  #cart-items {
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cart-item:last-child {
+    border-bottom: none;
+  }
+  
+  .cart-item span {
+    font-weight: bold;
+  }
+  
+
+/* <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #cart-items {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    #cart-items p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Shopping Cart</h1>
+  <div id="cart-items">
+    <!-- Cart items will be displayed here -->
+  </div>
+
+  <script>
+    // Sample product data (replace with your own product data)
+    const products = [
+      { name: 'Product 1', price: 19.99 },
+      { name: 'Product 2', price: 29.99 },
+      // Add more products as needed
+    ];
+
+    // Function to display products in the cart
+    function displayCart() {
+      const cartContainer = document.getElementById('cart-items');
+      cartContainer.innerHTML = ''; // Clear previous content
+
+      // Iterate through products and display them in the cart
+      products.forEach((product, index) => {
+        const cartItem = document.createElement('p');
+        cartItem.textContent = `${product.name} - $${product.price}`;
+        cartContainer.appendChild(cartItem);
+      });
+    }
+
+    // Call the displayCart function to initially display products in the cart
+    displayCart();
+  </script>
+</body>
+</html> */

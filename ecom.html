@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Website</title>
+  <link rel="stylesheet" href="ecom.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to our E-Commerce Store</h1><br>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="product">
+      <img src="PepperSpray.png" alt="PepperSpray">
+      <h2>Pepper Spray</h2>
+      <p>Bitter Shot Personal Defence Spray</p>
+      <span>₹175</span>
+      <button>Add to Cart</button>
+    </section>
+
+    <section class="product">
+      <img src="keychain.png" alt="keychain">
+      <h2>Keychain Knife </h2>
+      <p>Compact portable keychain hidden knife</p>
+      <span>₹300</span>
+      <button onclick="addToCart('Keychain.png',300)">Add to Cart</button>
+    </section>
+    
+    <section class="product">
+        <img src="keychainAlarm.png" alt="keychain Alarm">
+        <h2>Emergency alarm</h2>
+        <p>Devil will cry emergency alarm in a keychain to seek help. also includes siren sounds</p>
+        <span>₹500</span>
+        <button onclick="addToCart('KeychainAlarm',500)">Add to Cart</button>
+      </section>
+
+      <section class="product">
+        <img src="CombKnife.jpg" alt="CombKnife">
+        <h2>Knife in comb</h2>
+        <p>Portable knife hidden in a comb.</p>
+        <span>₹100</span>
+        <button onclick="addToCart('CombKnife',100)">Add to Cart</button>
+      </section>
+
+      <section class="product">
+        <img src="LipstickStunGun.png" alt="LipstickStunGun">
+        <h2>Stun Gun</h2>
+        <p>A taser disguised as a Lipstick.</p>
+        <span>₹799</span>
+        <button onclick="addToCart('LipstickStunGun',799)">Add to Cart</button>
+      </section>
+    
+      <section class="product">
+        <img src="ConcealedBladeRing.jpg" alt="ConcealedBladeRing">
+        <h2>Blade Ring/h2>
+        <p>CHIC SELF-DEFENSE RING WITH A CONCEALED BLADE</p>
+        <span>₹50</span>
+        <button onclick="addToCart('ConcealedBladeRing',50)">Add to Cart</button>
+      </section>
+      <a href="cart.html">Go to Cart</a>
+
+  </main>
+  <script>
+    function addToCart(productName, price) {
+      // Check if cart is already in local storage
+      const button = event.target;
+      button.classList.add('added');
+      button.innerText = 'ADDED';
+      let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+      // Add the selected product to cart
+      cartItems.push({ name: productName, price: price });
+
+      // Store the updated cart in local storage
+      localStorage.setItem('cart', JSON.stringify(cartItems));
+    }
+  </script>
+  <footer>
+    <p>&copy; 2023 E-Commerce Store. All rights reserved.</p>
+  </footer>
+</body>
+</html>

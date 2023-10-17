@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+  <h1>Shopping Cart</h1>
+  <div id="cart-items">
+    <!-- Cart items will be displayed here -->
+  </div>
+
+  <script>
+    // Sample product data (replace with your own product data)
+    const products = [
+      { name: 'Product 1', price: 19.99 },
+      { name: 'Product 2', price: 29.99 },
+      // Add more products as needed
+    ];
+
+    // Function to display products in the cart
+    function displayCart() {
+      const cartContainer = document.getElementById('cart-items');
+      cartContainer.innerHTML = ''; // Clear previous content
+
+      // Iterate through products and display them in the cart
+      products.forEach((product, index) => {
+        const cartItem = document.createElement('div');
+        cartItem.innerHTML = `<p>${product.name} - $${product.price}</p>`;
+        cartContainer.appendChild(cartItem);
+      });
+    }
+
+    // Call the displayCart function to initially display products in the cart
+    displayCart();
+  </script>
+</body>
+</html>
